@@ -473,7 +473,94 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    // Enhanced Contact Page Interactions
+    if (window.location.pathname.includes('contact.html')) {
+        // Communication icons interaction
+        document.querySelectorAll('.comm-icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const method = this.getAttribute('data-method');
+                
+                switch(method) {
+                    case 'email':
+                        window.location.href = 'mailto:dylanferko@gmail.com';
+                        break;
+                    case 'phone':
+                        window.location.href = 'tel:+18013619242';
+                        break;
+                    case 'linkedin':
+                        showNotification('LinkedIn profile opening soon!', 'info');
+                        break;
+                    case 'github':
+                        showNotification('GitHub profile opening soon!', 'info');
+                        break;
+                }
+            });
+        });
+
+        // Enhanced form validation feedback
+        const contactFormEnhanced = document.getElementById('contactForm');
+        if (contactFormEnhanced) {
+            contactFormEnhanced.addEventListener('input', function(e) {
+                const input = e.target;
+                if (input.type === 'email' && input.value) {
+                    if (isValidEmail(input.value)) {
+                        input.style.borderColor = '#00ff88';
+                        input.style.boxShadow = '0 0 0 3px rgba(0, 255, 136, 0.1)';
+                    } else {
+                        input.style.borderColor = '#ff4757';
+                        input.style.boxShadow = '0 0 0 3px rgba(255, 71, 87, 0.1)';
+                    }
+                }
+            });
+        }
+    }
 });
+
+import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+const heroSection = document.querySelector('.hero-section');
+
+if (heroSection) {
+  let neonCursorInstance = null;
+
+  heroSection.addEventListener('mouseenter', () => {
+    if (!neonCursorInstance) {
+      neonCursorInstance = neonCursor({
+        el: heroSection,
+        shaderPoints: 16,
+        curvePoints: 10,
+        curveLerp: 0.1,
+        radius1: 2,
+        radius2: 5,
+        velocityTreshold: 10,
+        sleepRadiusX: 0,
+        sleepRadiusY: 0,
+        sleepTimeCoefX: 0.0025,
+        sleepTimeCoefY: 0.0025,
+        color1: '#00d4ff',
+        color2: '#00d4ff',
+        color3: '#00d4ff'
+      });
+    }
+  });
+
+  heroSection.addEventListener('mouseleave', () => {
+    if (neonCursorInstance) {
+      const canvas = heroSection.querySelector('canvas');
+      if (canvas) {
+        canvas.style.transition = 'opacity 3s ease';
+        canvas.style.opacity = '0';
+        setTimeout(() => {
+          canvas.remove();
+          neonCursorInstance = null;
+        }, 3000);
+      } else {
+        neonCursorInstance = null;
+      }
+    }
+  });
+}
 
 // Notification system
 function showNotification(message, type = 'info') {
@@ -615,20 +702,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
-
-neonCursor({
-  el: document.querySelector('.hero-section'),
-  shaderPoints: 16,
-  curvePoints: 80,
-  curveLerp: 0.5,
-  radius1: 5,
-  radius2: 30,
-  velocityTreshold: 10,
-  sleepRadiusX: 100,
-  sleepRadiusY: 100,
-  sleepTimeCoefX: 0.0025,
-  sleepTimeCoefY: 0.0025,
-  color: [0, 0.83, 1]
-})
