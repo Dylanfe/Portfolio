@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Dylan Ferkovich</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300d4ff'/><text x='50' y='65' text-anchor='middle' font-family='Arial Black' font-size='40' font-weight='bold' fill='white'>D</text></svg>">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +16,7 @@
                 <span>Dylan Ferkovich</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="resume.html" class="active">Resume</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -30,18 +31,33 @@
 
     <div class="resume-container">
         <header class="resume-header">
-            <div class="personal-info">
-                <h1>Dylan Ferkovich</h1>
-                <p class="professional-title">Cybersecurity & IT Support Specialist</p>
-                <div class="contact-info">
-                    <span><i class="fas fa-envelope"></i> dylanferko@gmail.com</span>
-                    <span><i class="fas fa-phone"></i> (801) 361-9242</span>
+            <div class="resume-hero">
+                <div class="hero-avatar">
+                    <div class="avatar-circle">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>Available for Opportunities</span>
+                    </div>
                 </div>
-            </div>
-            <div class="download-btn">
-                <button onclick="window.print()" class="btn btn-primary">
-                    <i class="fas fa-download"></i> Download PDF
-                </button>
+                <div class="personal-info">
+                    <h1>Dylan Ferkovich</h1>
+                    <p class="professional-title">Cybersecurity & IT Support Specialist</p>
+                    <div class="contact-info">
+                        <span><i class="fas fa-envelope"></i> dylanferko@gmail.com</span>
+                        <span><i class="fas fa-phone"></i> (801) 361-9242</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Salt Lake City, UT</span>
+                    </div>
+                </div>
+                <div class="resume-actions">
+                    <button onclick="window.print()" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
             </div>
         </header>
 
@@ -54,16 +70,46 @@
             <h2><i class="fas fa-certificate"></i> Certifications</h2>
             <div class="certifications-grid">
                 <div class="cert-item">
-                    <i class="fas fa-award"></i>
-                    <span>CompTIA A+</span>
+                    <div class="cert-logo comptia-a-plus">
+                        <div class="cert-badge">
+                            <div class="cert-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="cert-text">
+                                <span class="cert-name">A+</span>
+                                <span class="cert-vendor">CompTIA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span>CompTIA A+ Certified</span>
                 </div>
                 <div class="cert-item">
-                    <i class="fas fa-network-wired"></i>
-                    <span>CompTIA Network+</span>
+                    <div class="cert-logo comptia-network">
+                        <div class="cert-badge">
+                            <div class="cert-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="cert-text">
+                                <span class="cert-name">Net+</span>
+                                <span class="cert-vendor">CompTIA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span>CompTIA Network+ Certified</span>
                 </div>
                 <div class="cert-item">
-                    <i class="fab fa-google"></i>
-                    <span>Google IT Support Fundamentals</span>
+                    <div class="cert-logo google-cert">
+                        <div class="cert-badge">
+                            <div class="cert-icon">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="cert-text">
+                                <span class="cert-name">IT Support</span>
+                                <span class="cert-vendor">Google</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span>Google IT Support Professional</span>
                 </div>
             </div>
         </section>
@@ -205,6 +251,6 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

@@ -172,6 +172,110 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1000);
     }
     
+    // Terminal Animation
+    const terminalLines = document.querySelectorAll('.terminal-line');
+    if (terminalLines.length > 0) {
+        terminalLines.forEach((line, index) => {
+            if (index < terminalLines.length - 1) { // Don't animate the cursor line
+                line.style.opacity = '0';
+                setTimeout(() => {
+                    line.style.opacity = '1';
+                    line.style.animation = 'fadeInUp 0.5s ease';
+                }, (index + 1) * 800);
+            }
+        });
+    }
+    
+    // Floating Particles Animation
+    function createFloatingParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'floating-particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 4 + 2}px;
+            height: ${Math.random() * 4 + 2}px;
+            background: ${Math.random() > 0.5 ? 'var(--primary-color)' : 'var(--success-color)'};
+            border-radius: 50%;
+            left: ${Math.random() * 100}%;
+            animation: floatUp ${Math.random() * 3 + 5}s linear infinite;
+            opacity: ${Math.random() * 0.5 + 0.2};
+        `;
+        
+        const particleContainer = document.querySelector('.floating-particles');
+        if (particleContainer) {
+            particleContainer.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+    }
+    
+    // Create particles periodically
+    setInterval(createFloatingParticle, 2000);
+    
+    // Timeline Animation
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    timelineItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-50px)';
+        item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        timelineObserver.observe(item);
+    });
+    
+    // Metric Cards Animation
+    const metricCards = document.querySelectorAll('.metric-card');
+    const metricsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const metricNumber = entry.target.querySelector('.metric-number');
+                const finalValue = metricNumber.textContent;
+                
+                if (finalValue.includes('%')) {
+                    const numValue = parseInt(finalValue);
+                    animateNumber(metricNumber, 0, numValue, '%');
+                } else if (finalValue.includes('+')) {
+                    const numValue = parseInt(finalValue);
+                    animateNumber(metricNumber, 0, numValue, '+');
+                } else {
+                    const numValue = parseInt(finalValue);
+                    animateNumber(metricNumber, 0, numValue, '');
+                }
+                
+                metricsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    metricCards.forEach(card => {
+        metricsObserver.observe(card);
+    });
+    
+    function animateNumber(element, start, end, suffix) {
+        const duration = 2000;
+        const increment = (end - start) / (duration / 16);
+        let current = start;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= end) {
+                element.textContent = end + suffix;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current) + suffix;
+            }
+        }, 16);
+    }
+    
     // Skills animation on hover
     document.querySelectorAll('.skill-tag').forEach(tag => {
         tag.addEventListener('mouseenter', function() {
@@ -298,6 +402,76 @@ document.addEventListener('DOMContentLoaded', function() {
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
+    }
+
+    // Enhanced Resume Page Interactions
+    if (window.location.pathname.includes('resume.html')) {
+        // Certificate hover effects
+        document.querySelectorAll('.cert-item').forEach(cert => {
+            cert.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) translateY(-5px)';
+                this.style.boxShadow = '0 15px 35px rgba(0, 212, 255, 0.3)';
+            });
+            
+            cert.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) translateY(0)';
+                this.style.boxShadow = '';
+            });
+        });
+
+        // Avatar animation
+        const avatar = document.querySelector('.avatar-circle');
+        if (avatar) {
+            avatar.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(5deg)';
+            });
+            
+            avatar.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        }
+    }
+
+    // Enhanced Contact Page Interactions
+    if (window.location.pathname.includes('contact.html')) {
+        // Communication icons interaction
+        document.querySelectorAll('.comm-icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const method = this.getAttribute('data-method');
+                
+                switch(method) {
+                    case 'email':
+                        window.location.href = 'mailto:dylanferko@gmail.com';
+                        break;
+                    case 'phone':
+                        window.location.href = 'tel:+18013619242';
+                        break;
+                    case 'linkedin':
+                        showNotification('LinkedIn profile opening soon!', 'info');
+                        break;
+                    case 'github':
+                        showNotification('GitHub profile opening soon!', 'info');
+                        break;
+                }
+            });
+        });
+
+        // Enhanced form validation feedback
+        const contactFormEnhanced = document.getElementById('contactForm');
+        if (contactFormEnhanced) {
+            contactFormEnhanced.addEventListener('input', function(e) {
+                const input = e.target;
+                if (input.type === 'email' && input.value) {
+                    if (isValidEmail(input.value)) {
+                        input.style.borderColor = '#00ff88';
+                        input.style.boxShadow = '0 0 0 3px rgba(0, 255, 136, 0.1)';
+                    } else {
+                        input.style.borderColor = '#ff4757';
+                        input.style.boxShadow = '0 0 0 3px rgba(255, 71, 87, 0.1)';
+                    }
+                }
+            });
+        }
     }
 });
 
@@ -441,3 +615,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+neonCursor({
+  el: document.querySelector('.hero-section'),
+  shaderPoints: 16,
+  curvePoints: 80,
+  curveLerp: 0.5,
+  radius1: 5,
+  radius2: 30,
+  velocityTreshold: 10,
+  sleepRadiusX: 100,
+  sleepRadiusY: 100,
+  sleepTimeCoefX: 0.0025,
+  sleepTimeCoefY: 0.0025,
+  color: [0, 0.83, 1]
+})
