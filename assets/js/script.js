@@ -522,43 +522,21 @@ import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-t
 const heroSection = document.querySelector('.hero-section');
 
 if (heroSection) {
-  let neonCursorInstance = null;
-
-  heroSection.addEventListener('mouseenter', () => {
-    if (!neonCursorInstance) {
-      neonCursorInstance = neonCursor({
-        el: heroSection,
-        shaderPoints: 16,
-        curvePoints: 10,
-        curveLerp: 0.1,
-        radius1: 2,
-        radius2: 5,
-        velocityTreshold: 10,
-        sleepRadiusX: 0,
-        sleepRadiusY: 0,
-        sleepTimeCoefX: 0.0025,
-        sleepTimeCoefY: 0.0025,
-        color1: '#00d4ff',
-        color2: '#00d4ff',
-        color3: '#00d4ff'
-      });
-    }
-  });
-
-  heroSection.addEventListener('mouseleave', () => {
-    if (neonCursorInstance) {
-      const canvas = heroSection.querySelector('canvas');
-      if (canvas) {
-        canvas.style.transition = 'opacity 3s ease';
-        canvas.style.opacity = '0';
-        setTimeout(() => {
-          canvas.remove();
-          neonCursorInstance = null;
-        }, 3000);
-      } else {
-        neonCursorInstance = null;
-      }
-    }
+  neonCursor({
+    el: heroSection,
+    shaderPoints: 16,
+    curvePoints: 10,
+    curveLerp: 0.1,
+    radius1: 2,
+    radius2: 5,
+    velocityTreshold: 10,
+    sleepRadiusX: 0,
+    sleepRadiusY: 0,
+    sleepTimeCoefX: 0.0025,
+    sleepTimeCoefY: 0.0025,
+    color1: '#00d4ff',
+    color2: '#00d4ff',
+    color3: '#00d4ff'
   });
 }
 
