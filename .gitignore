@@ -11,7 +11,6 @@ favicon.ico
 # Build outputs
 dist/
 build/
-public/
 
 # Dependencies
 node_modules/

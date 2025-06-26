@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A showcase of projects by Dylan Ferkovich, an I.T. and Cybersecurity Professional.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: blob:;">
+    <title>Projects - Dylan Ferkovich</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300d4ff'/><text x='50' y='65' text-anchor='middle' font-family='Arial Black' font-size='40' font-weight='bold' fill='white'>D</text></svg>">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Dylan Ferkovich</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="projects-container">
+        <header class="projects-hero">
+            <div class="hero-content">
+                <h1>Project Portfolio</h1>
+                <p class="hero-subtitle">Showcasing cybersecurity implementations, automation solutions, and technical innovations</p>
+            </div>
+        </header>
+
+        <div class="projects-filter">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>All Projects
+                </button>
+                <button class="filter-btn" data-filter="security">
+                    <i class="fas fa-shield-alt"></i>Security
+                </button>
+                <button class="filter-btn" data-filter="automation">
+                    <i class="fas fa-robot"></i>Automation
+                </button>
+                <button class="filter-btn" data-filter="networking">
+                    <i class="fas fa-network-wired"></i>Networking
+                </button>
+                <button class="filter-btn" data-filter="compliance">
+                    <i class="fas fa-balance-scale"></i>Compliance
+                </button>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project Template - Security Focus -->
+            <div class="project-card" data-category="security">
+                <div class="project-image">
+                    <i class="fas fa-shield-virus project-icon"></i>
+                    <div class="project-overlay">
+                        <span class="project-status"></span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Network Intrusion Detection System</h3>
+                    <p>A custom-built NIDS using Python and Scapy to monitor network traffic for suspicious activity.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scapy</span>
+                        <span class="tech-tag">Wireshark</span>
+                    </div>
+                    <div class="project-features">
+                        <ul>
+                            <li>Real-time packet sniffing</li>
+                            <li>Signature-based threat detection</li>
+                            <li>Customizable alert system</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-primary">View Project</button>
+                        <button class="btn btn-secondary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Template - Automation Focus -->
+            <div class="project-card" data-category="automation">
+                <div class="project-image">
+                    <i class="fas fa-robot project-icon"></i>
+                    <div class="project-overlay">
+                        <span class="project-status"></span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Automated Log Analysis</h3>
+                    <p>A PowerShell script that automates the process of collecting and analyzing security logs from multiple sources.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PowerShell</span>
+                        <span class="tech-tag">Regex</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                    <div class="project-features">
+                        <ul>
+                            <li>Centralized log collection</li>
+                            <li>Automated report generation</li>
+                            <li>Scheduled task integration</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-primary">View Project</button>
+                        <button class="btn btn-secondary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <section class="project-categories">
+            <h2>Project Categories</h2>
+            <div class="categories-grid">
+                <div class="category-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Security Implementation</h3>
+                    <p>Network security, threat detection, and incident response systems</p>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Process Automation</h3>
+                    <p>Python scripts, PowerShell automation, and workflow optimization</p>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-search"></i>
+                    <h3>Security Analysis</h3>
+                    <p>Vulnerability assessments, penetration testing, and security audits</p>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Compliance Solutions</h3>
+                    <p>GDPR, FCRA, and regulatory compliance automation systems</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <script src="../assets/js/script.js" type="module" defer></script>
+</body>
+</html>
