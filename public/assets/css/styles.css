@@ -1426,7 +1426,7 @@ html, body {
     color: var(--text-secondary);
 }
 
-.contact-card {
+.contact-card-single {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
@@ -1437,14 +1437,12 @@ html, body {
     border-radius: 20px;
     padding: 3rem;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-.contact-visual iframe {
-    border-radius: 12px;
+    align-items: center;
 }
 
-.contact-info {
-    border-right: 1px solid var(--border-color);
+.contact-info-single {
     padding-right: 3rem;
+    border-right: 1px solid var(--border-color);
 }
 
 .contact-details {
@@ -1546,9 +1544,84 @@ html, body {
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
 }
 
-.contact-form .btn {
-    width: 100%;
-    margin-top: 1rem;
+.contact-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 300px;
+}
+
+.grid-item-contact {
+    background: var(--background-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.grid-item-contact:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+}
+
+.grid-item-contact i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.availability-section {
+    margin-top: 4rem;
+    padding: 3rem;
+    background: var(--background-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.availability-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.availability-section p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.availability-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.availability-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--gradient-dark);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.availability-item i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.availability-item span {
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 #app {
@@ -1828,22 +1901,21 @@ html, body {
     }
     
     /* Enhanced Contact Mobile Styles */
-    .contact-card {
+    .contact-card-single {
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 2rem;
     }
 
-    .contact-card .contact-info {
+    .contact-info-single {
         border-right: none;
         padding-right: 0;
         border-bottom: 1px solid var(--border-color);
         padding-bottom: 2rem;
     }
 
-    .contact-card .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
+    .visual-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

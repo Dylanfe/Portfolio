@@ -4,6 +4,8 @@
 firebase.json
 firebase-debug.log*
 firebase-debug.*.log*
+*.firebase.json
+.firebaserc
 
 # Favicon
 favicon.ico
