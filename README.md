@@ -92,34 +92,6 @@ python -m http.server 8000
 # Using Node.js (if you have live-server installed)
 npx live-server public
 
-# Using PHP
-cd public
-php -S localhost:8000
-```
-
-3. Navigate to `http://localhost:8000` in your browser
-
-## 🌐 GitHub Pages Deployment
-
-This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
-
-### Setup GitHub Pages
-
-1. Push your repository to GitHub
-2. Go to your repository settings → Pages
-3. Under "Source", select "GitHub Actions"
-4. The workflow will automatically deploy your `public/` folder contents to GitHub Pages
-
-### How it works
-
-- The root `index.html` redirects to `public/index.html` for local development
-- GitHub Actions workflow deploys only the `public/` folder contents to GitHub Pages
-- Your site will be available at `https://yourusername.github.io/portfolio`
-
-### Manual Deployment
-
-You can also manually trigger deployment by going to the "Actions" tab in your repository and running the "Deploy to GitHub Pages" workflow.
-
 ## 🔧 Development
 
 ### Local Development
