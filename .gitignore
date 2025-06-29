@@ -65,3 +65,25 @@ temp/
 # Cache
 .cache/
 .parcel-cache/
+
+# Editor backups
+*~
+*.bak
+*.backup
+
+# Package manager lock files (if using npm/yarn)
+package-lock.json
+yarn.lock
+
+# Testing
+.nyc_output/
+coverage/
+
+# Deployment
+deploy.sh
+.deploy/
+
+# Misc
+*.tgz
+*.tar.gz
+.sass-cache/
