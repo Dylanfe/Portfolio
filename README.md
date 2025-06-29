@@ -91,11 +91,6 @@ python -m http.server 8000
 # Using Node.js (if you have live-server installed)
 npx live-server public
 
-# Using PHP
-cd public
-php -S localhost:8000
-```
-
 3. Navigate to `http://localhost:8000` in your browser
 
 ## 🔧 Development
