@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A showcase of projects by Dylan Ferkovich, an I.T. and Cybersecurity Professional.">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: blob:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: blob:;">
     <title>Projects - Dylan Ferkovich</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300d4ff'/><text x='50' y='65' text-anchor='middle' font-family='Arial Black' font-size='40' font-weight='bold' fill='white'>D</text></svg>">
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -53,6 +53,9 @@
                 <button class="filter-btn" data-filter="networking">
                     <i class="fas fa-network-wired"></i>Networking
                 </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-globe"></i>Web Development
+                </button>
                 <button class="filter-btn" data-filter="compliance">
                     <i class="fas fa-balance-scale"></i>Compliance
                 </button>
@@ -60,61 +63,147 @@
         </div>
 
         <div class="projects-grid">
-            <!-- OSINT Platform Project -->
+            <!-- Security+ SY0-701 Study Guide -->
             <div class="project-card" data-category="security">
                 <div class="project-image">
-                    <i class="fas fa-user-secret project-icon"></i>
+                    <img src="../assets/images/SY0-701-preview.png" alt="Security+ SY0-701 Study Guide Preview" class="project-screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-graduation-cap project-icon" style="display: none;"></i>
                     <div class="project-overlay">
-                        <span class="project-status" style="background-color: var(--warning-color);">Work in Progress</span>
+                        <span class="project-status" style="background-color: var(--success-color);">Live</span>
                     </div>
                 </div>
                 <div class="project-content">
-                    <h3>OSINT Platform</h3>
-                    <p>A platform for Open Source Intelligence gathering and analysis.</p>
+                    <h3>Security+ SY0-701 Study Guide</h3>
+                    <p>Comprehensive web-based application for studying and practicing for the CompTIA Security+ certification exam with interactive quizzes and study materials.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JSON</span>
                     </div>
                     <div class="project-features">
                         <ul>
-                            <li>Automated data collection</li>
-                            <li>Data analysis and visualization</li>
-                            <li>Case management features</li>
+                            <li>200 practice questions with detailed explanations</li>
+                            <li>Interactive study guide covering all 5 domains</li>
+                            <li>Progress tracking and note-taking features</li>
+                            <li>Dark/light mode and responsive design</li>
                         </ul>
                     </div>
                     <div class="project-actions">
-                        <a href="https://github.com/Dylanfe/OSINT-platform" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub</a>
+                        <a href="https://dylanfe.github.io/Security---SY0-701/" target="_blank" rel="noopener" class="btn btn-primary">View Live Site</a>
+                        <a href="https://github.com/Dylanfe/Security---SY0-701" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Lone Wraps Project -->
+            <!-- Portfolio Website -->
             <div class="project-card" data-category="web">
                 <div class="project-image">
-                    <i class="fas fa-paint-roller project-icon"></i>
+                    <img src="../assets/images/portfolio-preview.png" alt="Portfolio Website Preview" class="project-screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-user-tie project-icon" style="display: none;"></i>
+                    <div class="project-overlay">
+                        <span class="project-status" style="background-color: var(--success-color);">Live</span>
+                    </div>
                 </div>
                 <div class="project-content">
-                    <h3>Lone-Wraps</h3>
-                    <p>A website for a vehicle wrapping business.</p>
+                    <h3>Professional Portfolio</h3>
+                    <p>Modern, responsive portfolio website showcasing my professional experience as an IT & Cybersecurity Professional with custom domain and cloud hosting.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Namecheap</span>
                     </div>
                     <div class="project-features">
                         <ul>
-                            <li>Showcase of work</li>
-                            <li>Contact form for inquiries</li>
-                            <li>Mobile-responsive design</li>
+                            <li>Professional timeline and certifications showcase</li>
+                            <li>Responsive design with modern animations</li>
+                            <li>Firebase hosting with custom domain</li>
+                            <li>Contact forms and project galleries</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://dylanfe.github.io/Portfolio" target="_blank" rel="noopener" class="btn btn-primary">Visit Website</a>
+                        <a href="https://github.com/Dylanfe/Portfolio" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lone-Wraps Website -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="../assets/images/lone-wraps-preview.png" alt="Lone-Wraps Auto Wrap Business Website" class="project-screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-car project-icon" style="display: none;"></i>
+                    <div class="project-overlay">
+                        <span class="project-status" style="background-color: var(--success-color);">Live</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Lone-Wraps Business Website</h3>
+                    <p>Professional auto wrap business website for Utah's premier vehicle wrapping service, featuring advanced gallery management, online estimator, and secure booking system.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">TailwindCSS</span>
+                    </div>
+                    <div class="project-features">
+                        <ul>
+                            <li>Dynamic gallery management system</li>
+                            <li>Interactive pricing estimator tool</li>
+                            <li>Security-hardened backend with rate limiting</li>
+                            <li>Responsive design with video backgrounds</li>
+                            <li>Contact forms with spam protection</li>
+                            <li>Firebase deployment integration</li>
                         </ul>
                     </div>
                     <div class="project-actions">
                         <a href="https://lone-wraps.web.app" target="_blank" rel="noopener" class="btn btn-primary">Visit Website</a>
-                        <a href="https://github.com/Dylanfe/Lone-Wraps" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+                        <a href="#" onclick="alert('This is a proprietary commercial project. Code is not publicly available, but a demo can be provided upon request.'); return false;" class="btn btn-secondary">Request Demo</a>
                     </div>
-                     <small style="display: block; text-align: center; margin-top: 1rem; color: var(--text-secondary);">Code for lone-wraps.web.app is not open source.</small>
+                    <small style="display: block; text-align: center; margin-top: 1rem; color: var(--text-secondary);">Proprietary commercial project - code not open source.</small>
+                </div>
+            </div>
+
+            <!-- OSINT Platform -->
+            <div class="project-card" data-category="security">
+                <div class="project-image">
+                    <img src="../assets/images/osint-platform-preview.png" alt="OSINT Platform Preview" class="project-screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-search project-icon" style="display: none;"></i>
+                    <div class="project-overlay">
+                        <span class="project-status" style="background-color: var(--warning-color);">In Development</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>OSINT Intelligence Platform</h3>
+                    <p>Advanced Open Source Intelligence gathering and analysis platform designed for cybersecurity professionals and threat researchers to collect, analyze, and visualize intelligence data.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-features">
+                        <ul>
+                            <li>Multi-source intelligence gathering automation</li>
+                            <li>Data visualization and analysis dashboard</li>
+                            <li>Threat actor profiling and tracking</li>
+                            <li>Secure data storage and encryption</li>
+                            <li>API integrations for various OSINT sources</li>
+                            <li>Export capabilities for reporting</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" onclick="alert('This project is currently in active development. A demo will be available upon completion.'); return false;" class="btn btn-primary">Coming Soon</a>
+                        <a href="https://github.com/Dylanfe/OSINT-platform" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+                    </div>
+                    <small style="display: block; text-align: center; margin-top: 1rem; color: var(--warning-color);">⚠️ Work in Progress - Active Development</small>
                 </div>
             </div>
         </div>
