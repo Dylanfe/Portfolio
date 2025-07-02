@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my professional experience as an IT & Cybersecurity Professional. Built with clean HTML5, CSS3, and JavaScript to highlight my expertise in security systems, incident response, and compliance management.
 
-## 🚀 Features
+## Features
 
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **Interactive Terminal**: Animated command-line interface showcasing technical skills
@@ -11,7 +11,7 @@ A modern, responsive portfolio website showcasing my professional experience as 
 - **Certification Display**: Prominently featuring CompTIA and Google certifications
 - **Contact Integration**: Easy access to professional contact information
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript
 - **Styling**: Custom CSS with modern flexbox and grid layouts
@@ -19,7 +19,7 @@ A modern, responsive portfolio website showcasing my professional experience as 
 - **Security**: Content Security Policy (CSP) headers implemented
 - **Performance**: Optimized assets and minimal dependencies
 
-## 🎯 Sections
+## Sections
 
 ### Home Page (`index.html`)
 - Hero section with professional summary
@@ -44,7 +44,7 @@ A modern, responsive portfolio website showcasing my professional experience as 
 - Links to LinkedIn and GitHub profiles
 - Contact form for inquiries
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Portfolio/
@@ -67,7 +67,7 @@ Portfolio/
         └── resume.html       # Resume page
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - A modern web browser
@@ -92,7 +92,7 @@ python -m http.server 8000
 # Using Node.js (if you have live-server installed)
 npx live-server public
 
-## 🔧 Development
+## Development
 
 ### Local Development
 The project uses vanilla HTML, CSS, and JavaScript for maximum compatibility and performance. No build process required.
@@ -107,18 +107,18 @@ The project uses vanilla HTML, CSS, and JavaScript for maximum compatibility and
 - Secure external resource loading
 - Input validation and sanitization
 
-## 📱 Browser Support
+## Browser Support
 
 - Chrome 80+
 - Firefox 75+
 - Safari 13+
 - Edge 80+
 
-## 📄 License
+## License
 
 This is a personal portfolio project. All rights reserved.
 
-## 📞 Contact
+## Contact
 
 **Dylan Ferkovich**
 - **Email**: [Contact through website form](public/pages/contact.html)
