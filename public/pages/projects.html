@@ -63,6 +63,158 @@
         </div>
 
         <div class="projects-grid">
+            <!-- Cybersecurity Homelab -->
+            <div class="project-card" data-category="security networking compliance">
+                <div class="project-image">
+                    <img src="../assets/images/windows.png" alt="Cybersecurity Homelab Preview" class="project-screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-network-wired project-icon" style="display: none;"></i>
+                    <div class="project-overlay">
+                        <span class="project-status" style="background-color: var(--success-color);">Lab</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Cybersecurity Homelab</h3>
+                    <p>Virtual enterprise network environment for hands-on experience in Windows Server administration, Active Directory security, network defense, and incident response simulation. Includes pfSense firewall, Windows Server, Kali Linux, and Metasploitable2 for practical security exercises.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">VirtualBox</span>
+                        <span class="tech-tag">pfSense</span>
+                        <span class="tech-tag">Windows Server</span>
+                        <span class="tech-tag">Kali Linux</span>
+                        <span class="tech-tag">Metasploitable2</span>
+                        <span class="tech-tag">Suricata</span>
+                        <span class="tech-tag">Wazuh</span>
+                    </div>
+                    <div class="project-features">
+                        <ul>
+                            <li>Active Directory, DNS, and Group Policy configuration</li>
+                            <li>Firewall and IDS/IPS with pfSense and Suricata</li>
+                            <li>Vulnerability scanning and penetration testing labs</li>
+                            <li>Incident response and security monitoring scenarios</li>
+                            <li>Documented setup and troubleshooting guides</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Dylanfe/Security-homelab/tree/main" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Minecraft IPLogger Plugin -->
+            <div class="project-card" data-category="security automation">
+                <div class="project-image">
+                    <i class="fas fa-server project-icon"></i>
+                    <div class="project-overlay">
+                        <span class="project-status" style="background-color: var(--success-color);">Open Source</span>
+                    </div>
+                </div>
+                <div class="project-content">
+<h3>Minecraft IPLogger Plugin</h3>
+                    <p>
+                        Open-source Minecraft server plugin for logging and analyzing player IP addresses, built with Java and Maven. Integrates with SQL databases to provide persistent, searchable audit trails for server moderation and cybersecurity.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Maven</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Bukkit</span>
+                        <span class="tech-tag">Spigot</span>
+                        <span class="tech-tag">Minecraft</span>
+                    </div>
+                    <div class="project-features">
+                        <ul>
+                            <li>Logs player IP addresses on join/leave events</li>
+                            <li>Stores logs in SQL databases for persistence and analysis</li>
+                            <li>Advanced search and filtering of connection history</li>
+                            <li>Automated detection of suspicious login patterns</li>
+                            <li>Facilitates incident response and audit compliance</li>
+                            <li>Integrates with moderation and ban workflows</li>
+                            <li>Enhances server cybersecurity and threat intelligence</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Dylanfe/Minecraft-IPLogger" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Network Security Honeypot -->
+            <div class="project-card" data-category="security networking">
+                <div class="project-image">
+                    <i class="fas fa-spider project-icon"></i>
+                    <div class="project-overlay">
+                        <span class="project-status" style="background-color: var(--warning-color);">In Progress</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Network Security Honeypot</h3>
+                    <p>Advanced multi-service honeypot system designed to detect, analyze, and respond to network intrusions and malicious activities. Built for real-time threat intelligence gathering and security research.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">ELK Stack</span>
+                        <span class="tech-tag">iptables</span>
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-features">
+                        <ul>
+                            <li>Multi-protocol honeypot (SSH, HTTP, FTP, Telnet, SMTP)</li>
+                            <li>Real-time attack detection and logging</li>
+                            <li>Automated threat intelligence reporting</li>
+                            <li>Geolocation analysis of attack sources</li>
+                            <li>Integration with security information systems</li>
+                            <li>Containerized deployment for isolation</li>
+                            <li>Machine learning-based attack pattern recognition</li>
+                            <li>Custom alerting and notification system</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" onclick="alert('Project is currently in development. Demo available upon completion.'); return false;" class="btn btn-secondary">Coming Soon</a>
+                        <a href="#" onclick="alert('GitHub repository will be available upon project completion.'); return false;" class="btn btn-secondary">GitHub (Coming Soon)</a>
+                    </div>
+                    <small style="display: block; text-align: center; margin-top: 1rem; color: var(--text-secondary);">
+                        <i class="fas fa-code-branch"></i> Currently implementing advanced logging mechanisms and threat analysis algorithms
+                    </small>
+                </div>
+            </div>
+            <!-- OSINT Platform -->
+            <div class="project-card" data-category="security">
+                <div class="project-image">
+                    <img src="../assets/images/osint-preview.png" alt="OSINT Platform Preview" class="project-screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-search project-icon" style="display: none;"></i>
+                    <div class="project-overlay">
+                        <span class="project-status" style="background-color: var(--success-color);">Live</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>OSINT Intelligence Platform</h3>
+                    <p>Advanced Open Source Intelligence gathering and analysis platform designed for cybersecurity professionals and threat researchers. Features a comprehensive tool database with real-time updates and secure cloud hosting.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                    <div class="project-features">
+                        <ul>
+                            <li>Comprehensive OSINT tools database with 20+ categorized tools</li>
+                            <li>Real-time data synchronization with MongoDB Atlas</li>
+                            <li>Advanced filtering and search capabilities</li>
+                            <li>User authentication and secure session management</li>
+                            <li>Firebase hosting with CI/CD deployment pipeline</li>
+                            <li>Tool rating system and usage analytics</li>
+                            <li>Responsive dashboard with modern UI/UX design</li>
+                        </ul>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://osint-platform.web.app/" target="_blank" rel="noopener" class="btn btn-primary">View Live Site</a>
+                        <a href="https://github.com/Dylanfe/OSINT-platform" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Security+ SY0-701 Study Guide -->
             <div class="project-card" data-category="security">
                 <div class="project-image">
@@ -166,125 +318,6 @@
                         <a href="#" onclick="alert('This is a proprietary commercial project. Code is not publicly available, but a demo can be provided upon request.'); return false;" class="btn btn-secondary">Request Demo</a>
                     </div>
                     <small style="display: block; text-align: center; margin-top: 1rem; color: var(--text-secondary);">Proprietary commercial project - code not open source.</small>
-                </div>
-            </div>
-
-            <!-- OSINT Platform -->
-            <div class="project-card" data-category="security">
-                <div class="project-image">
-                    <img src="../assets/images/osint-preview.png" alt="OSINT Platform Preview" class="project-screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <i class="fas fa-search project-icon" style="display: none;"></i>
-                    <div class="project-overlay">
-                        <span class="project-status" style="background-color: var(--success-color);">Live</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>OSINT Intelligence Platform</h3>
-                    <p>Advanced Open Source Intelligence gathering and analysis platform designed for cybersecurity professionals and threat researchers. Features a comprehensive tool database with real-time updates and secure cloud hosting.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                    </div>
-                    <div class="project-features">
-                        <ul>
-                            <li>Comprehensive OSINT tools database with 20+ categorized tools</li>
-                            <li>Real-time data synchronization with MongoDB Atlas</li>
-                            <li>Advanced filtering and search capabilities</li>
-                            <li>User authentication and secure session management</li>
-                            <li>Firebase hosting with CI/CD deployment pipeline</li>
-                            <li>Tool rating system and usage analytics</li>
-                            <li>Responsive dashboard with modern UI/UX design</li>
-                        </ul>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://osint-platform.web.app/" target="_blank" rel="noopener" class="btn btn-primary">View Live Site</a>
-                        <a href="https://github.com/Dylanfe/OSINT-platform" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Network Security Honeypot -->
-            <div class="project-card" data-category="security networking">
-                <div class="project-image">
-                    <i class="fas fa-spider project-icon"></i>
-                    <div class="project-overlay">
-                        <span class="project-status" style="background-color: var(--warning-color);">In Progress</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Network Security Honeypot</h3>
-                    <p>Advanced multi-service honeypot system designed to detect, analyze, and respond to network intrusions and malicious activities. Built for real-time threat intelligence gathering and security research.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Linux</span>
-                        <span class="tech-tag">ELK Stack</span>
-                        <span class="tech-tag">iptables</span>
-                        <span class="tech-tag">Wireshark</span>
-                        <span class="tech-tag">SQLite</span>
-                    </div>
-                    <div class="project-features">
-                        <ul>
-                            <li>Multi-protocol honeypot (SSH, HTTP, FTP, Telnet, SMTP)</li>
-                            <li>Real-time attack detection and logging</li>
-                            <li>Automated threat intelligence reporting</li>
-                            <li>Geolocation analysis of attack sources</li>
-                            <li>Integration with security information systems</li>
-                            <li>Containerized deployment for isolation</li>
-                            <li>Machine learning-based attack pattern recognition</li>
-                            <li>Custom alerting and notification system</li>
-                        </ul>
-                    </div>
-                    <div class="project-actions">
-                        <a href="#" onclick="alert('Project is currently in development. Demo available upon completion.'); return false;" class="btn btn-secondary">Coming Soon</a>
-                        <a href="#" onclick="alert('GitHub repository will be available upon project completion.'); return false;" class="btn btn-secondary">GitHub (Coming Soon)</a>
-                    </div>
-                    <small style="display: block; text-align: center; margin-top: 1rem; color: var(--text-secondary);">
-                        <i class="fas fa-code-branch"></i> Currently implementing advanced logging mechanisms and threat analysis algorithms
-                    </small>
-                </div>
-            </div>
-
-            <!-- Minecraft IPLogger Plugin -->
-            <div class="project-card" data-category="security automation">
-                <div class="project-image">
-                    <i class="fas fa-server project-icon"></i>
-                    <div class="project-overlay">
-                        <span class="project-status" style="background-color: var(--success-color);">Open Source</span>
-                    </div>
-                </div>
-                <div class="project-content">
-<h3>Minecraft IPLogger Plugin</h3>
-                    <p>
-                        Open-source Minecraft server plugin for logging and analyzing player IP addresses, built with Java and Maven. Integrates with SQL databases to provide persistent, searchable audit trails for server moderation and cybersecurity.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Maven</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Bukkit</span>
-                        <span class="tech-tag">Spigot</span>
-                        <span class="tech-tag">Minecraft</span>
-                    </div>
-                    <div class="project-features">
-                        <ul>
-                            <li>Logs player IP addresses on join/leave events</li>
-                            <li>Stores logs in SQL databases for persistence and analysis</li>
-                            <li>Advanced search and filtering of connection history</li>
-                            <li>Automated detection of suspicious login patterns</li>
-                            <li>Facilitates incident response and audit compliance</li>
-                            <li>Integrates with moderation and ban workflows</li>
-                            <li>Enhances server cybersecurity and threat intelligence</li>
-                        </ul>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/Dylanfe/Minecraft-IPLogger" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
-                    </div>
                 </div>
             </div>
         </div>
